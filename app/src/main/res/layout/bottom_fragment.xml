@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_fragment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cbf7f2">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom_fragment"></ImageView>
+
+
+    <RelativeLayout
+        android:id="@+id/screen_1_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/prompt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60px"
+            android:text="@string/prompt_text_string"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/info1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prompt_text"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="10px"
+            android:text="@string/info1_string"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/info2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info1"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="10px"
+            android:text="@string/info2_string"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/info3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info2"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="10px"
+            android:text="@string/info3_string"
+            android:textSize="25px" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/screen_2_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fase2_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80px"
+            android:text="@string/fase2_text1_string"
+            android:textSize="40px" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fase2_text1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60px"
+            android:background="#ffffff">
+
+            <Button
+                android:id="@+id/button_abort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="80px"
+                android:layout_centerVertical="true"
+                android:background="#ff0000"
+                android:text=" Ακύρωση "
+                android:textAllCaps="false"
+                android:textSize="30px" />
+
+            <Button
+                android:id="@+id/button_continue_later"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="80px"
+                android:layout_toRightOf="@+id/button_abort"
+                android:background="#00ff00"
+                android:text=" Ορισμός ώρας \nπλυσίματος "
+                android:textAllCaps="false"
+                android:textSize="30px" />
+
+            <Button
+                android:id="@+id/button_continue_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/button_continue_later"
+                android:background="#00ff00"
+                android:text=" Πλύσιμο τώρα "
+                android:textAllCaps="false"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/screen_25_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/chose_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60px"
+            android:text="Επιλέξτε την επιθυμητή ώρα έναρξης πλυσίματος και πατήστε 'ΟΚ'"
+            android:textSize="25px"
+            android:translationZ="2dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chose_time_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-40px"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:background="#ffffff">
+
+            <TimePicker
+                android:id="@+id/timepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="80px"
+                android:timePickerMode="spinner" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/timepicker"
+                android:background="#ffffff">
+
+                <Button
+                    android:id="@+id/button_time_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff00"
+                    android:text=" OK "
+                    android:textAllCaps="false"
+                    android:textSize="30px" />
+
+                <Button
+                    android:id="@+id/button_abort_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/button_time_ok"
+                    android:layout_marginTop="50px"
+                    android:background="#ff0000"
+                    android:text=" Άκυρο "
+                    android:textAllCaps="false"
+                    android:textSize="30px" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/screen_3_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/please_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60px"
+            android:text="Παρακαλώ τοποθετήστε την ταμπλέτα και το λαμπρυντικό για το πλύσιμο"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/please_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/please_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10px"
+            android:text="στην εσωτερική πλευρά της πορτάς του πλυντηρίου και πατήστε 'ΟΚ'."
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/please_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/please_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10px"
+            android:text="Αν δεν έχετε ταμπλέτα πατήστε 'Άκυρο'."
+            android:textSize="25px" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/please_3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40px"
+            android:background="#ffffff">
+
+            <Button
+                android:id="@+id/button_no_tablet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="80px"
+                android:background="#ff0000"
+                android:text=" Άκυρο "
+                android:textAllCaps="false"
+                android:textSize="30px" />
+
+            <Button
+                android:id="@+id/button_tablet_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/button_no_tablet"
+                android:background="#00ff00"
+                android:text=" OK "
+                android:textAllCaps="false"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/screen_35_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/programmed_hour_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60px"
+            android:text="Προγραμματισμένη ώρα έναρξης πλυσίματος: "
+            android:textSize="25px" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/programmed_hour_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60px"
+            android:background="#ffffff">
+
+            <Button
+                android:id="@+id/abort_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="80px"
+                android:background="#ff0000"
+                android:text=" Ακύρωση "
+                android:textAllCaps="false"
+                android:textSize="30px" />
+
+            <Button
+                android:id="@+id/wash_fucking_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/abort_plan"
+                android:background="#00ff00"
+                android:text=" Πλύσιμο τώρα "
+                android:textAllCaps="false"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/screen_4_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fase4_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60px"
+            android:text="Απομένουν περίπου 25 λεπτά"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/fase4_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fase4_text1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10px"
+            android:text="για την ολοκλήρωση του πλυσίματος"
+            android:textSize="30px" />
+
+
+        <TextView
+            android:id="@+id/fase4_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fase4_text2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:text="Πατήστε το κουμπί STOP αν για οποιοδήποτε λόγο επιθυμείτε"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/fase4_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fase4_text3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10px"
+            android:text="να διακόψετε τη λειτουργία του πλυντηρίου"
+            android:textSize="30px" />
+
+        <Button
+            android:id="@+id/stop_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="400px"
+            android:layout_height="150px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50px"
+            android:layout_marginBottom="30px"
+            android:background="@drawable/off_b"
+            android:text="Stop"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColorLink="?attr/colorError" />
+
+        <TextView
+            android:id="@+id/fase4_are_you_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/fase4_text2"
+            android:layout_marginTop="20px"
+            android:text="Ακύρωση πλυσίματος;"
+            android:textSize="30px"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/inner_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fase4_are_you_sure"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:background="#ffffff"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/no_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50px"
+                android:background="#999999"
+                android:text=" Όχι "
+                android:textSize="30px" />
+
+            <Button
+                android:id="@+id/yes_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/no_cancel"
+                android:background="#999999"
+                android:text=" Ναι "
+                android:textSize="30px" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/screen_last_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/final_message1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100px"
+            android:text="@string/final_message1_string"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/final_message2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/final_message1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:text="@string/final_message2_string"
+            android:textSize="25px" />
+
+        <Button
+            android:id="@+id/last_ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/final_message2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50px"
+            android:background="#00ff00"
+            android:text=" OK "
+            android:textSize="30px" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
