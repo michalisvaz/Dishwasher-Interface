@@ -5,4 +5,4 @@ We created a user interface for a dishwashing machine. The purpose was to simpli
 
 A video demonstrating our app in use is available [here](https://www.youtube.com/watch?v=qZQi5DcARfY).
 
-My partners in this project were Chrysa Dikonimaki (@xrisaD) and Vasilis Ballas (@BLM3826).
+My partners in this project were Chrysa Dikonimaki ([@xrisaD](https://github.com/xrisaD)) and Vasilis Ballas ([@BLM3826](https://github.com/BLM3826)).
